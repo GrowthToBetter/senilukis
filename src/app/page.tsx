@@ -13,15 +13,14 @@ export default function Home() {
         alert("Please rotate your device to landscape mode.");
       }
     };
-
-    window.addEventListener("resize", handleOrientation);
+    window.addEventListener("load", handleOrientation);
 
     const redirectInterval = setInterval(() => {
       router.push("/main");
     }, 5000); 
 
     return () => {
-      window.removeEventListener("resize", handleOrientation);
+      window.removeEventListener("load", handleOrientation);
       clearInterval(redirectInterval); 
     };
   }, [router]);
