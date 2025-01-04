@@ -49,6 +49,18 @@ export const MateriData: MateriItem[] = [
           judul: "Teknik mural",
           isi: '"Teknik melukis di tembok yang seringkali digunakan sebagai penghias eksterior"',
         },
+        {
+            judul: "Realisme",
+            isi:'“Aliran yang bertujuan untuk merepresentasikan alam sesuai dengan keadaannya yang sebenarnya”'
+        },
+        {
+            judul: "Surealisme",
+            isi:'“Aliran yang berkaitan erat dengan dunia fantasi sehingga seolah-olah pelukis sedang melukis dalam mimpi”'
+        },
+        {
+            judul: "Pointilisme",
+            isi:'“Aliran yang memanipulasi ketidaksensitifan mata dalam meneliti detail kumpulan titik”'
+        }
       ],
     },
     {

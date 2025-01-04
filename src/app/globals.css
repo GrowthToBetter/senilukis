@@ -14,6 +14,13 @@
   }
 }
 
+@media screen and (orientation: portrait) {
+  body {
+    display: none;
+  }
+}
+
+
 body {
   color: var(--foreground);
   background: var(--background);

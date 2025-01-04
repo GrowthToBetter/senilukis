@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { SectionContainer } from "./components/layout/SectionContainer";
 import { Button } from "./components/ui/button";
 import { Body1, H1 } from "./components/ui/text";
@@ -7,24 +7,20 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router= useRouter();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isLandscape, setIsLandscape] = useState(true);
-
   useEffect(() => {
-    const checkOrientation = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
+    const handleOrientation = () => {
+      if (window.innerHeight > window.innerWidth) {
+        alert("Please rotate your device to landscape mode.");
+      }
     };
-
-    checkOrientation();
-
-    window.addEventListener('resize', checkOrientation);
-    window.addEventListener('orientationchange', checkOrientation);
-
+  
+    window.addEventListener("resize", handleOrientation);
+  
     return () => {
-      window.removeEventListener('resize', checkOrientation);
-      window.removeEventListener('orientationchange', checkOrientation);
+      window.removeEventListener("resize", handleOrientation);
     };
   }, []);
+  
   return (
     <SectionContainer className="min-w-max min-h-max bg-[url('/bg1.png')] bg-cover bg-center relative">
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
