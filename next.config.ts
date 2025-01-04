@@ -1,7 +1,31 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  pwa: {
+    dest: 'public',
+    register: true, 
+    skipWaiting: true, 
+  },
+
+
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+  },
+
 };
 
 export default nextConfig;

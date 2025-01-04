@@ -19,7 +19,9 @@ export default function Home() {
         <Button
           variant={"outline"}
           size={"lg"}
-          className="mt-5 text-black font-bold">
+          className="mt-5 text-black font-bold"
+          onClick={() => router.push("/game")}
+          >
           Game
         </Button>
       </div>

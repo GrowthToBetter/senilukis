@@ -33,7 +33,7 @@ export default function MateriDetail() {
 
   return (
     <SectionContainer
-      className="relative bg-center bg-cover bg-no-repeat"
+      className="relative bg-center bg-cover bg-no-repeat flex justify-center items-center"
       style={{ backgroundImage: `url(${item.cover})` }}>
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
       <nav className="fixed flex justify-between w-full z-20 top-0 start-0 ">
@@ -66,32 +66,30 @@ export default function MateriDetail() {
           <></>
         )}
       </nav>
-      <div className=" z-10 p-8 text-white">
-        <div className="bg-white absolute rounded-b-xl w-1/3 h-20 top-[-10px] right-1/3 font-bold text-center flex flex-col justify-evenly items-center text-black">
-          {item.judul}
-        </div>
+      <div className="bg-white absolute rounded-b-xl w-1/3 h-20 top-[-10px] right-1/3 font-bold text-center flex flex-col justify-evenly items-center text-black">
+        {item.judul}
+      </div>
+      <div className=" z-10 p-8 flex justify-center items-center text-white">
         {item.child ? (
-          <div>
+          <div className="grid grid-cols-2 gap-10">
             {item.child
               .slice(
                 currentPage * itemsPerPage,
                 currentPage * itemsPerPage + itemsPerPage
               )
               .map((child, index) => (
-                <div key={index} className="mb-6">
-                  <h2 className="text-2xl font-semibold">{child.judul}</h2>
-                  <Body1 className="text-white text-center w-2/3 mt-3 font-light text-wrap text-sm">
+                <div key={index} className="mb-6 w-full grid grid-rows-2">
+                  <h2 className="text-2xl font-semibold text-center border-b border-white">{child.judul}</h2>
+                  <Body1 className="text-white text-center mt-3 font-light text-wrap text-sm">
                     {child.isi}
                   </Body1>
                 </div>
               ))}
           </div>
         ) : (
-          item.isi && (
-            <Body1 className="text-white text-center w-2/3 mt-3 font-light text-wrap text-sm">
-              {item.isi}
-            </Body1>
-          )
+          <Body1 className="text-white text-center w-2/3 mt-3 font-light text-wrap text-sm">
+            {item.isi}
+          </Body1>
         )}
       </div>
     </SectionContainer>

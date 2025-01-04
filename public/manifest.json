@@ -1,6 +1,6 @@
 {
-  "name": "Nama Aplikasi",
-  "short_name": "Aplikasi",
+  "name": "seni lukis",
+  "short_name": "senluk",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
