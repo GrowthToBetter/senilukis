@@ -113,7 +113,7 @@ export default function QuestionDetail() {
               Your Score: {(score / 5) * 100}
             </H1>
             <div className="mt-4">
-              <Button onClick={handleGoHome} className="text-white" variant={"outline"}>
+              <Button onClick={handleGoHome} className="text-black" variant={"outline"}>
                 Home
               </Button>
             </div>
