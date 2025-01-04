@@ -10,7 +10,14 @@ import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 import { Body1 } from "@/app/components/ui/text";
 
-export const Materi = [
+export type MateriItem = {
+  cover: string;
+  judul: string;
+  id: number;
+  isi?: string; 
+  child?: { judul: string; isi: string }[]; 
+};
+export const Materi:MateriItem[] = [
   {
     cover: "/bg4.png",
     judul: "Apa Itu Seni Lukis ?",
@@ -66,6 +73,7 @@ export const Materi = [
     cover: "/bg6.png",
     id: 3,
     judul: "pelukis Terkenal",
+    isi:'"Beberapa pelukis terkenal yang mendunia antara lain Leonardo da Vinci dengan Mona Lisa, Vincent van Gogh dengan Starry Night, dan Affandi dengan gaya ekspresifnya."'
   },
 ];
 
