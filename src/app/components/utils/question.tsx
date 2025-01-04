@@ -1,5 +1,6 @@
+import { Question } from "@/app/menu/[id]/page";
 import React, { useState } from "react";
-import { Question } from "../../menu/[id]/page";
+
 
 type MultipleChoiceProps = {
   questions: Question[];

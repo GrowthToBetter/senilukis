@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { SectionContainer } from "../components/layout/SectionContainer";
-import { Materi } from "./[id]/page";
 import { Button } from "../components/ui/button";
+import { MateriData as Materi } from "../components/utils/materi";
 
 export default function MateriList() {
   const router = useRouter();
